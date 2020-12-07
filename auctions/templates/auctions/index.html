@@ -7,7 +7,7 @@
         {% for Listing in listings %}
             <li>
                 <a href="{% url 'listing' Listing.id %}">
-                    {{ Listing.id }}: {{ Listing.price }}
+                    {{ Listing.id }}: {{ Listing.title }} - {{ Listing.price }}
                 </a>
             </li>
         {% endfor %}

@@ -12,5 +12,11 @@
         <li>{{ listing.owner }}</li>
     </ul>
 
+    <form action="{% url 'listing' listing.id %}" method="POST">
+        {% csrf_token %}
+        <input type="number" name="bid">
+        <input type="submit" value="Bid">
+    </form>
+
 {% endblock %}
 

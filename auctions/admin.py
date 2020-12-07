@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Listing
+from .models import Category, Listing, Bid
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("id", "category")
@@ -10,3 +10,4 @@ class ListingAdmin(admin.ModelAdmin ):
 # Register your models here.
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Listing, ListingAdmin)
+admin.site.register(Bid)
